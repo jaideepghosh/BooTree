@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
+# BooTree
 
-You can use the [editor on GitHub](https://github.com/jaideepghosh/BooTree/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A simple solution for displaying check-boxes in hierarchical tree structures (i.e. a Tree View) with Amazing Bootstrap.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![BooTree Screenshot](https://i.imgur.com/eHr71T2.png)
 
-### Markdown
+## Dependencies
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+For UI better experiece, Include following dependencies:
 
-```markdown
-Syntax highlighted code block
+1. [jQuery v2.1.3 (>= 1.9.0)](http://jquery.com/)
+2. [Bootstrap v3.3.4 (>= 3.0.0)](http://getbootstrap.com/)
 
-# Header 1
-## Header 2
-### Header 3
+## Getting Started
 
-- Bulleted
-- List
+### Installation
 
-1. Numbered
-2. List
+Include the following files in your project.
 
-**Bold** and _Italic_ and `Code` text
+1. bootree.min.css 
+2. bootree.min.js
 
-[Link](url) and ![Image](src)
+### Usage
+
+Add the following resources in your html file.
+
+```
+  <!-- Required Stylesheets -->
+  <link href="../dist/bootree.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Required Javascript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="../dist/bootree.min.js" type="text/javascript"></script>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The component will bind to any existing DOM element.
 
-### Jekyll Themes
+```
+	<div id="tree"></div>
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jaideepghosh/BooTree/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+To initialize the BooTree and plot the check-boxes in #tree:
 
-### Support or Contact
+```
+    <script type="text/javascript">
+            $(document).ready(function () {
+                var tree = $('#tree').tree({
+                    primaryKey: 'id',
+                    uiLibrary: 'bootstrap',
+                    dataSource: [ { id: 1, text: 'Apple', children: [ { id: 2, text: 'Avocado' } ] } ]
+                    checkboxes: true
+                });
+                $('#btnSave').on('click', function () {
+                    var checkedIds = tree.getCheckedNodes();
+                    alert(checkedIds);
+                });
+            });
+    </script>
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
