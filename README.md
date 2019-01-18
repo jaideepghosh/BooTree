@@ -59,3 +59,5 @@ To initialize the BooTree and plot the check-boxes in #tree:
     </script>
 ```
 
+# Example
+You can see BooTree [here](https://jaideepghosh.github.io/BooTree/example/index.html).
