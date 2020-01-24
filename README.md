@@ -6,8 +6,6 @@ A simple solution for displaying check-boxes in hierarchical tree structures (i.
 
 ## Dependencies
 
-For UI better experiece, Include following dependencies:
-
 1. [jQuery v2.1.3 (>= 1.9.0)](http://jquery.com/)
 2. [Bootstrap v3.3.4 (>= 3.0.0)](http://getbootstrap.com/)
 
@@ -17,7 +15,7 @@ For UI better experiece, Include following dependencies:
 
 Include the following files in your project.
 
-1. bootree.min.css 
+1. bootree.min.css
 2. bootree.min.js
 
 ### Usage
@@ -60,4 +58,5 @@ To initialize the BooTree and plot the check-boxes in #tree:
 ```
 
 # Example
+
 You can see BooTree [here](https://jaideepghosh.github.io/BooTree/example/index.html).
