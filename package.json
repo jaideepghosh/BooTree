@@ -1,0 +1,27 @@
+{
+  "name": "bootree",
+  "version": "1.0.0",
+  "description": "A simple solution for displaying check-boxes in hierarchical tree structures (i.e. a Tree View) with Amazing Bootstrap. ",
+  "main": "dist/bootree.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaideepghosh/BooTree.git"
+  },
+  "keywords": [
+    "treeview",
+    "bootstrap",
+    "checkbox"
+  ],
+  "author": "Jaideep Ghosh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaideepghosh/BooTree/issues"
+  },
+  "homepage": "https://github.com/jaideepghosh/BooTree#readme"
+}
